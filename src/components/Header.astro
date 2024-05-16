@@ -124,8 +124,15 @@ const links: Link[] = [
 <script is:inline>
   function applyTheme(theme) {
     const body = document.querySelector('body');
+    const themeToggleButton = document.getElementById('theme-toggle-button');
 
-    body.classList.toggle('light');
+    if (theme === 'light') {
+      body.classList.add('light');
+      themeToggleButton.setAttribute('stroke', 'white');
+    } else {
+      body.classList.remove('light');
+      themeToggleButton.setAttribute('stroke', 'black');
+    }
 
     localStorage.setItem('theme', theme);
   }
@@ -134,10 +141,10 @@ const links: Link[] = [
     const themeToggleButton = document.getElementById('theme-toggle-button');
     if (themeToggleButton.getAttribute('stroke') === 'white') {
       themeToggleButton.setAttribute('stroke', 'black');
-      applyTheme('light');
+      applyTheme('dark');
     } else {
       themeToggleButton.setAttribute('stroke', 'white');
-      applyTheme('dark');
+      applyTheme('light');
     }
   }
 
@@ -164,9 +171,13 @@ const links: Link[] = [
     }
   }
 
-  // function loadTheme() {
-  //   applyTheme(localStorage.getItem('theme') || 'light');
-  // }
+  function loadTheme() {
+    const theme = localStorage.getItem('theme');
 
-  // // loadTheme();
+    console.log(`theme: ${theme}`);
+
+    applyTheme(theme);
+  }
+
+  loadTheme();
 </script>

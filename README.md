@@ -2,4 +2,4 @@
 
 Repo for my personal website
 
-[https://dotslashann.me](https://dotslashann.me)
+[https://www.dotslashann.me](https://www.dotslashann.me)
