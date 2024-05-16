@@ -1,9 +1,15 @@
 ---
 import Header from '~/components/Header.astro';
 import Layout from './Layout.astro';
+
+type PageProps = {
+  title: string;
+};
+
+const { title } = Astro.props as PageProps;
 ---
 
-<Layout pageTitle={'Home'}>
+<Layout pageTitle={title}>
   <>
     <Header />
 

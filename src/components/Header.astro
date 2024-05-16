@@ -2,7 +2,7 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 
 import UserIcon from './icons/UserIcon.astro';
-import JobHistoryIcon from './icons/JobHistoryIcon.astro';
+import WorkHistoryIcon from './icons/WorkHistoryIcon.astro';
 import ProjectsIcon from './icons/ProjectsIcon.astro';
 import ThemeToggle from './icons/ThemeToggle.astro';
 
@@ -22,7 +22,7 @@ type Link = {
 
 const links: Link[] = [
   { Icon: UserIcon, iconClasses: 'mr-4', label: 'About', href: '/' },
-  { Icon: JobHistoryIcon, iconClasses: 'mr-1', label: 'Job History', href: '/job-history' },
+  { Icon: WorkHistoryIcon, iconClasses: 'mr-1', label: 'Work History', href: '/work-history' },
   { Icon: ProjectsIcon, iconClasses: 'mr-4', label: 'Projects', href: '/projects' },
 ];
 ---
