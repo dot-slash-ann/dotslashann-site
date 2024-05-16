@@ -1,0 +1,30 @@
+---
+import type { IconProps } from '~/types';
+
+const {
+  classes,
+  svgProps,
+  id,
+  fill = 'currentColor',
+  width = 40,
+  height = 40,
+  viewBox = '0 0 32 32',
+} = Astro.props as IconProps;
+---
+
+<svg
+  class={classes}
+  width={width}
+  height={height}
+  viewBox={viewBox}
+  enable-background="new 0 0 32 32"
+  id={id}
+  version="1.1"
+  xml:space="preserve"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  fill={fill}
+  {...svgProps}
+>
+  <slot />
+</svg>

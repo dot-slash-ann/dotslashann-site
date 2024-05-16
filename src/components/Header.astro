@@ -1,0 +1,171 @@
+---
+import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
+
+import UserIcon from './icons/UserIcon.astro';
+import JobHistoryIcon from './icons/JobHistoryIcon.astro';
+import ProjectsIcon from './icons/ProjectsIcon.astro';
+import ThemeToggle from './icons/ThemeToggle.astro';
+
+const menuIcon = 'M 5,10 L 35,10 M 5,20 L 35,20 M 5,30 L 35,30';
+const closeIcon = 'M 5,5 L 35,35 M 35,5 L 5,35';
+
+const currentPage = Astro.url.pathname;
+
+console.log(`currentPage: ${currentPage}`);
+
+type Link = {
+  Icon: AstroComponentFactory;
+  iconClasses: string;
+  label: string;
+  href: string;
+};
+
+const links: Link[] = [
+  { Icon: UserIcon, iconClasses: 'mr-4', label: 'About', href: '/' },
+  { Icon: JobHistoryIcon, iconClasses: 'mr-1', label: 'Job History', href: '/job-history' },
+  { Icon: ProjectsIcon, iconClasses: 'mr-4', label: 'Projects', href: '/projects' },
+];
+---
+
+<div id="backdrop" class="fixed top-0 left-0 w-full h-full hidden z-[1] bg-black/75" onclick="toggleMenu()"></div>
+<div class="absolute top-0 right-0 mt-4 mr-4 align-middle">
+  <button class="flex align-middle items-center" onclick="toggleTheme()">
+    <ThemeToggle />
+  </button>
+</div>
+<button
+  id="menu-toggle-button"
+  onclick="toggleMenu()"
+  data-icon-menu={menuIcon}
+  data-icon-close={closeIcon}
+  class="z-50 absolute top-0 left-0 w-8 h-8 mt-4 mr-4 translate-x-4 bg-background text-text-primary border-none flex justify-center items-center hover:bg-primary transform hover:transform-background-color ease-in-out duration-500 rounded-full"
+  aria-label="mobile menu toggle"
+>
+  <svg
+    class="transform-fill duration-300 ease-in-out"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    width="16"
+    height="16"
+    viewBox="0 0 40 40"
+    stroke-width="4"
+    stroke="currentColor"
+  >
+    <path id="menu-icon" d={menuIcon} stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+</button>
+<header
+  id="main-nav"
+  class="rounded-md absolute top-0 left-0 w-56 h-[50vh] bg-light-background z-40 -translate-x-[100vw] transform-translate ease-in-out duration-500"
+>
+  <div class="w-full">
+    <nav class="">
+      <div class="flex justify-between items-center mb-4">
+        <!-- <p class="mt-4 mr-4 ml-2 text-2xl">$./ann</p> -->
+        <svg class="mt-2 ml-2" width="128" height="56" viewBox="0 0 56 128" xmlns="http://www.w3.org/2000/svg">
+          <text x="100px" y="50%" dominant-baseline="middle" text-anchor="end" font-family="monospace" font-size="56">
+            $ ./ann
+          </text>
+        </svg>
+      </div>
+
+      <ul id="main-nav-links" class="flex flex-col" aria-expanded="false">
+        {
+          links.map((link) => {
+            const liClass = link.href === currentPage ? ' active' : '';
+
+            return (
+              <li
+                class={
+                  'p-2 transition-background-color duration-300 ease-in-out hover:bg-primary hover:text-white' + liClass
+                }
+              >
+                <a class="block" href={link.href}>
+                  <div class="link-container flex flex-row justify-start items-center">
+                    {<link.Icon classes={link.iconClasses} />}
+                    {link.label}
+                  </div>
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  #menu-toggle-button:hover svg path {
+    stroke: white;
+  }
+
+  #main-nav.open svg path {
+    transition: stroke 300ms ease-in-out;
+    transform-origin: center;
+  }
+
+  .active {
+    border-bottom: 4px solid transparent; /* Transparent border for consistent height */
+    background-image: linear-gradient(
+      to right,
+      transparent 1rem,
+      var(--color-primary) 1rem,
+      var(--color-primary) calc(100% - 1rem),
+      transparent calc(100% - 1rem)
+    );
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 2px; /* Same thickness as the border */
+  }
+</style>
+
+<script is:inline>
+  function applyTheme(theme) {
+    const body = document.querySelector('body');
+
+    body.classList.toggle('light');
+
+    localStorage.setItem('theme', theme);
+  }
+
+  function toggleTheme() {
+    const themeToggleButton = document.getElementById('theme-toggle-button');
+    if (themeToggleButton.getAttribute('stroke') === 'white') {
+      themeToggleButton.setAttribute('stroke', 'black');
+      applyTheme('light');
+    } else {
+      themeToggleButton.setAttribute('stroke', 'white');
+      applyTheme('dark');
+    }
+  }
+
+  function toggleMenu() {
+    const nav = document.getElementById('main-nav');
+    const menuButton = document.getElementById('menu-toggle-button');
+    const icon = document.getElementById('menu-icon');
+    const backdrop = document.getElementById('backdrop');
+
+    backdrop?.classList.toggle('hidden');
+    nav.classList.toggle('open');
+    nav.classList.toggle('sm::-left-0');
+    nav.classList.toggle('min-[1344px]:-left-60');
+    nav.classList.toggle('-translate-x-[100vw]');
+
+    menuButton.classList.toggle('min-[1344px]:-translate-x-[4rem]');
+    menuButton.classList.toggle('sm:translate-x-44');
+
+    // Toggle the SVG path
+    if (nav.classList.contains('open')) {
+      icon.setAttribute('d', menuButton.dataset.iconClose);
+    } else {
+      icon.setAttribute('d', menuButton.dataset.iconMenu);
+    }
+  }
+
+  // function loadTheme() {
+  //   applyTheme(localStorage.getItem('theme') || 'light');
+  // }
+
+  // // loadTheme();
+</script>

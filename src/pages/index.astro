@@ -1,0 +1,91 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+const expertiseAndValues = [
+  'Proficient in transforming project visions into production ready code, leveraging my broad skill set to craft efficient and impactful solutions',
+  'Skilled in architecting resilient systems that prioritize operational excellence and seamless disaster recovery, ensuring high availablity and performance under demanding conditions',
+  'Deep understanding of software design priciples and the strategic application of the right technology for the job, complemented by an emphasis in long term sustainability and adaptability as requirements evolve',
+  'Commited to mentoring, instilling best practices, and fostering a culture of continuous improvement, ownership, and learning within the team',
+  'Advocate for Equity and Belonging within the workplace, commited to the priciples of equitable sourcing, recruiting, and hiring practices. and supportive of initiatives that promote a diverse and inclusive environment',
+];
+
+const programmingLanguages = [
+  'Typescript/Javascript',
+  'Java',
+  'Sql (psql, MySql)',
+  'Bash',
+  'Terraform',
+  'PHP',
+  'Ruby on Rails',
+  'Python',
+];
+const cloudTechnologies = [
+  'EC2, Lambda, ECS',
+  'S3, DynamoDb, RDS',
+  'SQS, SNS',
+  'Api Gateway',
+  'SSM, Secrets Manager',
+  'KMS',
+  'Kinesis',
+];
+const FrameworksAndLibraries = [
+  'Node',
+  'Git',
+  'Docker',
+  'Github Actions',
+  'Hashicorp',
+  'Flask/FastApi',
+  'Spring Boot',
+  'Astro',
+];
+---
+
+<PageLayout>
+  <h1 class="text-text-inverse text-3xl font-bold mb-8">Ann Alonzo</h1>
+  <p class="text-text-inverse mt-2">
+    Versatile <b>Senior Software Engineer</b> with experience in developing highly reliable and scalable solutions for large-scale
+    problems. Seeking to leverage a broad skill set in <b>DevOps</b>, <b>full stack</b>, and <b>backend</b> development to
+    create efficient, cost-effective solutions. Eager to bring a track record of transitioning production visions into successful
+    deployments, emphasizing reliability, maintainability, extensibility, and disaster recovery agility.
+  </p>
+  <h2 class="text-lg text-text-inverse font-bold mt-4 mb-2">Expertise & Values</h2>
+  <ul id="experience-and-values" class="list-disc pl-8">
+    {expertiseAndValues.map((item) => <li class="text-text-inverse">{item}</li>)}
+  </ul>
+
+  <h2 class="text-lg text-text-inverse font-bold mt-4 mb-2">
+    Technical Skills <span class="text-sm font-normal">(not a complete list)</span>
+  </h2>
+
+  <div id="technical-skills" class="grid gap-5 p-5">
+    <ul class="list-disc pl-8">
+      <h3 class="font-bold -ml-8 text-text-inverse mb-1">Programming Languages</h3>
+      {programmingLanguages.map((item) => <li class="text-text-inverse">{item}</li>)}
+    </ul>
+    <ul class="list-disc pl-8">
+      <h3 class="font-bold -ml-8 text-text-inverse mb-1">Cloud Technologies</h3>
+      {cloudTechnologies.map((item) => <li class="text-text-inverse">{item}</li>)}
+    </ul>
+    <ul class="list-disc pl-8">
+      <h3 class="font-bold -ml-8 text-text-inverse mb-1">Frameworks and Libraries</h3>
+      {FrameworksAndLibraries.map((item) => <li class="text-text-inverse">{item}</li>)}
+    </ul>
+  </div>
+</PageLayout>
+
+<style>
+  #technical-skills li,
+  #experience-and-values li {
+    margin-bottom: 0.5rem;
+  }
+
+  #technical-skills {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    #technical-skills {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,41 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+
+import Css from './scaffold/Css.astro';
+import Fonts from './scaffold/Fonts.astro';
+import Meta from './scaffold/Meta.astro';
+
+import '../styles/VariableDefinitions.astro';
+
+const env = process.env.NODE_ENV;
+
+export type LayoutProps = {
+  pageTitle: string;
+};
+
+const { pageTitle } = Astro.props as LayoutProps;
+---
+
+<html lang="en" dir="ltr">
+  <head>
+    <Meta env={env} />
+    <Fonts />
+    <Css />
+
+    <ViewTransitions fallback={'animate'} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle + ' | Budget Witch'}</title>
+  </head>
+  <body class="motion-safe:scroll-smooth bg-gray-500 sm:max-w-[52rem] max-w-[80rem] m-auto">
+    <div class="relative bg-background-inverse rounded-md">
+      <slot />
+    </div>
+
+    <style is:global>
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>

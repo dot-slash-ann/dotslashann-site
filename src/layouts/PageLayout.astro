@@ -1,0 +1,16 @@
+---
+import Header from '~/components/Header.astro';
+import Layout from './Layout.astro';
+---
+
+<Layout pageTitle={'Home'}>
+  <>
+    <Header />
+
+    <main class="min-h-[100vh] mt-[4.5rem] px-4 pt-20">
+      <slot />
+    </main>
+
+    <!-- Footer goes here -->
+  </>
+</Layout>

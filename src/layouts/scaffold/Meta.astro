@@ -1,0 +1,12 @@
+---
+type MetaProps = {
+  env?: string;
+};
+
+const { env = 'dev' } = Astro.props as MetaProps;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+
+{env !== 'prod' && env !== 'production' && <meta name="generator" content={Astro.generator} />}
