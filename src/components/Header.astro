@@ -62,7 +62,7 @@ const links: Link[] = [
     <nav class="">
       <div class="flex justify-between items-center mb-4">
         <!-- <p class="mt-4 mr-4 ml-2 text-2xl">$./ann</p> -->
-        <svg class="mt-2 ml-2" width="128" height="56" viewBox="0 0 56 128" xmlns="http://www.w3.org/2000/svg">
+        <svg class="mt-2 ml-4" width="128" height="56" viewBox="0 0 56 128" xmlns="http://www.w3.org/2000/svg">
           <text x="100px" y="50%" dominant-baseline="middle" text-anchor="end" font-family="monospace" font-size="56">
             $ ./ann
           </text>
@@ -77,7 +77,8 @@ const links: Link[] = [
             return (
               <li
                 class={
-                  'p-2 transition-background-color duration-300 ease-in-out hover:bg-primary hover:text-white' + liClass
+                  'p-2 ml-2 transition-background-color duration-300 ease-in-out hover:bg-primary hover:text-white' +
+                  liClass
                 }
               >
                 <a class="block" href={link.href}>
