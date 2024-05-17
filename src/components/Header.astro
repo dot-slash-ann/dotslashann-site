@@ -176,5 +176,22 @@ const links: Link[] = [
     applyTheme(theme);
   }
 
+  function setActivePage() {
+    const navMenuItems = document.getElementsByClassName('nav-menu-item');
+
+    for (let item of navMenuItems) {
+      const anchor = item.querySelector('a');
+
+      if (anchor.getAttribute('href') === window.location.pathname) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    }
+  }
+
   document.addEventListener('astro:page-load', loadTheme);
+  document.addEventListener('astro:page-load', () => {
+    setActivePage();
+  });
 </script>
