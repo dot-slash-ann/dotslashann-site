@@ -1,4 +1,5 @@
 ---
+import SvgWrapper from '~/components/icons/SvgWrapper.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 ---
 
@@ -7,196 +8,268 @@ import PageLayout from '../layouts/PageLayout.astro';
 
   <!-- Teamshares Inc. -->
   <div class="flex flex-col p-2 shadow-lg rounded-lg work-history-entry bg-zinc-400">
-    <div class="flex flex-row gap-2">
-      <h2 class="font-medium">Senior Software Engineer @ Teamshares Inc.</h2>
-      <p class="">New York, NY (Remote)</p>
+    <div class="content-header hover:cursor-pointer">
+      <div class="flex flex-row gap-2">
+        <h2 class="font-medium">Senior Software Engineer @ Teamshares Inc.</h2>
+        <p class="">New York, NY (Remote)</p>
+        <SvgWrapper
+          width={24}
+          height={24}
+          classes="ml-auto top-4 right-0 collapse-icon transform duration-300 ease-in-out"
+          viewBox="0 0 24 24"
+        >
+          <path
+            id="Vector"
+            d="M15 11L12 14L9 11"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </SvgWrapper>
+      </div>
+      <p class="text-sm"><i>Aug 2022 - Mar 2024</i></p>
     </div>
-    <p class="text-sm"><i>Aug 2022 - Mar 2024</i></p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Mentorship & Leadership</span>:
-      <p>
-        Guided junior engineers in advancing their software projects using domain-driven design principles, focusing on
-        innovative solutions to enhance product functionality and alignment with business goals
+    <div class="transition-max-height duration-500 ease-in-out overflow-hidden max-h-0 content">
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Mentorship & Leadership</span>:
+        <p>
+          Guided junior engineers in advancing their software projects using domain-driven design principles, focusing
+          on innovative solutions to enhance product functionality and alignment with business goals
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Data Architecture</span>:
-      <p>
-        Initiated and led working sessions to redesign existing data models based on domain-driven design to accurately
-        mirror business processes, significantly reducing the risk of technical debt associated with future system
-        overhauls
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Data Architecture</span>:
+        <p>
+          Initiated and led working sessions to redesign existing data models based on domain-driven design to
+          accurately mirror business processes, significantly reducing the risk of technical debt associated with future
+          system overhauls
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">QA & CI/CD Optimization</span>:
-      <p>
-        Dedicated significant efforts to shore up both unit and end-to-end testing frameworks. Enhanced the stability
-        and reliability of the CI/CD pipeline by identifying and resolving sources of flakiness in tests
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">QA & CI/CD Optimization</span>:
+        <p>
+          Dedicated significant efforts to shore up both unit and end-to-end testing frameworks. Enhanced the stability
+          and reliability of the CI/CD pipeline by identifying and resolving sources of flakiness in tests
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Projects / Development</span>:
-      <ul class="list-disc pl-8">
-        <li>
-          ETL pipeline: Aggregated user equity and dividend payout data used to automate tax filing documents with Ruby
-          on Rails
-        </li>
-        <li>
-          ETL pipeline: Automated processes that executed complex business rules and eliminated human error from manual
-          data entry (Zendesk data transfer, equity issuance and deferred cancelation workflow, )
-        </li>
-        <li>
-          ETL pipeline: Automated company valuations data workflow and eliminated the need for csv files being passed
-          between teams
-        </li>
-      </ul>
-    </p>
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Projects / Development</span>:
+        <ul class="list-disc pl-8">
+          <li>
+            ETL pipeline: Aggregated user equity and dividend payout data used to automate tax filing documents with
+            Ruby on Rails
+          </li>
+          <li>
+            ETL pipeline: Automated processes that executed complex business rules and eliminated human error from
+            manual data entry (Zendesk data transfer, equity issuance and deferred cancelation workflow, )
+          </li>
+          <li>
+            ETL pipeline: Automated company valuations data workflow and eliminated the need for csv files being passed
+            between teams
+          </li>
+        </ul>
+      </p>
+    </div>
   </div>
 
   <!-- TempoAutomation Inc. -->
   <div class="flex flex-col p-2 shadow-lg rounded-lg work-history-entry bg-zinc-400 mt-8">
-    <div class="flex flex-row gap-2">
-      <h2 class="font-medium">Senior Software Engineer @ TempoAutomation Inc.</h2>
-      <p class="">San Francisco, CA (Remote)</p>
+    <div class="content-header hover:cursor-pointer">
+      <div class="flex flex-row gap-2">
+        <h2 class="font-medium">Senior Software Engineer @ TempoAutomation Inc.</h2>
+        <p class="">San Francisco, CA (Remote)</p>
+        <SvgWrapper
+          width={24}
+          height={24}
+          classes="ml-auto top-4 right-0 collapse-icon transform duration-300 ease-in-out"
+          viewBox="0 0 24 24"
+        >
+          <path
+            id="Vector"
+            d="M15 11L12 14L9 11"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </SvgWrapper>
+      </div>
+      <p class="text-sm"><i>Apr 2021 - May 2022</i></p>
     </div>
-    <p class="text-sm"><i>Apr 2021 - May 2022</i></p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Team & Vision Leadership</span>:
-      <p>
-        Solely responsible for the DevOps domain on a newly formed team. Defined scope, responsibilities, and both short
-        and long-term goals. Crafted a comprehensive two-year roadmap to develop core infrastructure components
-        essential for organizational growth
+    <div class="transition-max-height duration-500 ease-in-out overflow-hidden max-h-0">
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Team & Vision Leadership</span>:
+        <p>
+          Solely responsible for the DevOps domain on a newly formed team. Defined scope, responsibilities, and both
+          short and long-term goals. Crafted a comprehensive two-year roadmap to develop core infrastructure components
+          essential for organizational growth
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Strategic Audits & Planning</span>:
-      <p>
-        Conducted detailed audits of initial planning, scoping, implementation, and deployment practices. Produced a
-        strategic recommendations report aimed at advancing DevOps objectives and enhancing the CI/CD platform to
-        support robust future implementation
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Strategic Audits & Planning</span>:
+        <p>
+          Conducted detailed audits of initial planning, scoping, implementation, and deployment practices. Produced a
+          strategic recommendations report aimed at advancing DevOps objectives and enhancing the CI/CD platform to
+          support robust future implementation
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Technology Integration & Innovation</span>:
-      <p>
-        Spearheaded the integration of Hashicorp technologies into the software ecosystem. Addressed critical challenges
-        in credential management, service discovery, infrastructure tracking, and account management, significantly
-        boosting the productivity and capabilities of the feature implementation team
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Technology Integration & Innovation</span>:
+        <p>
+          Spearheaded the integration of Hashicorp technologies into the software ecosystem. Addressed critical
+          challenges in credential management, service discovery, infrastructure tracking, and account management,
+          significantly boosting the productivity and capabilities of the feature implementation team
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Architecture Guidance & System Design</span>:
-      <p>
-        Provided architectural guidance for high-scale, high-availability, distributed cloud systems. Supported the
-        feature implementation team in automating core processes, advising on AWS resource utilization, best practices,
-        and tailored solutions for unique business requirements
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Architecture Guidance & System Design</span>:
+        <p>
+          Provided architectural guidance for high-scale, high-availability, distributed cloud systems. Supported the
+          feature implementation team in automating core processes, advising on AWS resource utilization, best
+          practices, and tailored solutions for unique business requirements
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Projects / Development</span>:
-      <p>
-        Designed and prototyped a GitHub self-hosted runner solution for a new CI/CD platform. Achievements included
-        faster artifact builds, secure data transfer across multiple AWS accounts in compliance with ITAR/EAR
-        regulations, and the creation of secure ephemeral build servers using the AWS govcloud
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Projects / Development</span>:
+        <p>
+          Designed and prototyped a GitHub self-hosted runner solution for a new CI/CD platform. Achievements included
+          faster artifact builds, secure data transfer across multiple AWS accounts in compliance with ITAR/EAR
+          regulations, and the creation of secure ephemeral build servers using the AWS govcloud
+        </p>
       </p>
-    </p>
+    </div>
   </div>
 
   <!-- Zillow Inc. -->
   <div class="flex flex-col p-2 shadow-lg rounded-lg work-history-entry bg-zinc-400 mt-8">
-    <div class="flex flex-row gap-2">
-      <h2 class="font-medium">Senior Software Engineer @ Zillow Inc.</h2>
-      <p class="">Seattle, WA (Hybrid)</p>
+    <div class="content-header hover:cursor-pointer">
+      <div class="flex flex-row gap-2">
+        <h2 class="font-medium">Senior Software Engineer @ Zillow Inc.</h2>
+        <p class="">Seattle, WA (Hybrid)</p>
+        <SvgWrapper
+          width={24}
+          height={24}
+          classes="ml-auto top-4 right-0 collapse-icon transform duration-300 ease-in-out"
+          viewBox="0 0 24 24"
+        >
+          <path
+            id="Vector"
+            d="M15 11L12 14L9 11"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </SvgWrapper>
+      </div>
+      <p class="text-sm"><i>May 2017 - Mar 2021</i></p>
     </div>
-    <p class="text-sm"><i>May 2017 - Mar 2021</i></p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Agile Leadership & Solution Ownership</span>:
-      <p>
-        Led the scoping, costing, design, implementation, and testing of SEO-critical services. Provided ongoing support
-        and guidance to the team on best practices for both new and existing services
+    <div class="transition-max-height duration-500 ease-in-out overflow-hidden max-h-0">
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Agile Leadership & Solution Ownership</span>:
+        <p>
+          Led the scoping, costing, design, implementation, and testing of SEO-critical services. Provided ongoing
+          support and guidance to the team on best practices for both new and existing services
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Cloud Architecture Expertise</span>:
-      <p>
-        Served as the team’s AWS specialist, offering expert advice on cloud architecture and cloud integrations,
-        enhancing performance, reliability, and scalability
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Cloud Architecture Expertise</span>:
+        <p>
+          Served as the team’s AWS specialist, offering expert advice on cloud architecture and cloud integrations,
+          enhancing performance, reliability, and scalability
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Technology Integration & Innovation</span>:
-      <p>
-        Spearheaded the integration of Hashicorp technologies into the software ecosystem. Addressed critical challenges
-        in credential management, service discovery, infrastructure tracking, and account management, significantly
-        boosting the productivity and capabilities of the feature implementation team
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Technology Integration & Innovation</span>:
+        <p>
+          Spearheaded the integration of Hashicorp technologies into the software ecosystem. Addressed critical
+          challenges in credential management, service discovery, infrastructure tracking, and account management,
+          significantly boosting the productivity and capabilities of the feature implementation team
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Projects / Development</span>:
-      <ul class="list-disc pl-8">
-        <li>
-          System Modernization: Successfully deprecated several costly, inadequate legacy systems, replacing them with
-          new, maintainable services that are now pivotal to the company’s SEO strategy
-        </li>
-        <li>
-          Architectural Transformation: Led the transition from a mono-repo architecture to a microservice architecture,
-          significantly increasing developer throughput and enhancing the developer experience
-        </li>
-      </ul>
-    </p>
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Projects / Development</span>:
+        <ul class="list-disc pl-8">
+          <li>
+            System Modernization: Successfully deprecated several costly, inadequate legacy systems, replacing them with
+            new, maintainable services that are now pivotal to the company’s SEO strategy
+          </li>
+          <li>
+            Architectural Transformation: Led the transition from a mono-repo architecture to a microservice
+            architecture, significantly increasing developer throughput and enhancing the developer experience
+          </li>
+        </ul>
+      </p>
+    </div>
   </div>
 
   <!-- Trulia Inc. -->
   <div class="flex flex-col p-2 shadow-lg rounded-lg work-history-entry bg-zinc-400 mt-8">
-    <div class="flex flex-row gap-2">
-      <h2 class="font-medium">Software Engineer @ Trulia Inc.</h2>
-      <p class="">San Francisco, CA</p>
+    <div class="content-header hover:cursor-pointer">
+      <div class="flex flex-row gap-2">
+        <h2 class="font-medium">Software Engineer @ Trulia Inc.</h2>
+        <p class="">San Francisco, CA</p>
+        <SvgWrapper
+          width={24}
+          height={24}
+          classes="ml-auto top-4 right-0 collapse-icon transform duration-300 ease-in-out"
+          viewBox="0 0 24 24"
+        >
+          <path
+            id="Vector"
+            d="M15 11L12 14L9 11"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </SvgWrapper>
+      </div>
+      <p class="text-sm"><i>Aug 2016 - May 2017</i></p>
     </div>
-    <p class="text-sm"><i>Aug 2016 - May 2017</i></p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Full Stack Development & Cloud Integration</span>:
-      <p>
-        Developed and managed end-to-end solutions ranging from infrastructure as code (Terraform), to front-end
-        frameworks (React) for SEO-critical services. Played a pivotal role in transitioning legacy systems to
-        microservice architecture and migrating all services to the AWS cloud
+    <div class="transition-max-height duration-500 ease-in-out overflow-hidden max-h-0">
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Full Stack Development & Cloud Integration</span>:
+        <p>
+          Developed and managed end-to-end solutions ranging from infrastructure as code (Terraform), to front-end
+          frameworks (React) for SEO-critical services. Played a pivotal role in transitioning legacy systems to
+          microservice architecture and migrating all services to the AWS cloud
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">CI/CD & Service Optimization</span>:
-      <p>
-        Engineered and integrated CI/CD pipelines for various projects, enhancing deployment processes and operational
-        reliability
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">CI/CD & Service Optimization</span>:
+        <p>
+          Engineered and integrated CI/CD pipelines for various projects, enhancing deployment processes and operational
+          reliability
+        </p>
       </p>
-    </p>
 
-    <p class="flex flex-row mt-2">
-      <span class="font-medium">Projects / Development</span>:
-      <ul class="list-disc pl-8">
-        <li>
-          Codebase Modernization: led the upgrade of the legacy PHP codebase from PHP5 to PHP7 resulting in a
-          performance improvement of 10-15%
-        </li>
-        <li>
-          Cloud Migration Leadership: Contributed decisively to the team’s success as the first in the organization to
-          transition all critical services to a 100% cloud-based infrastructure
-        </li>
-      </ul>
-    </p>
+      <p class="flex flex-row mt-2">
+        <span class="font-medium">Projects / Development</span>:
+        <ul class="list-disc pl-8">
+          <li>
+            Codebase Modernization: led the upgrade of the legacy PHP codebase from PHP5 to PHP7 resulting in a
+            performance improvement of 10-15%
+          </li>
+          <li>
+            Cloud Migration Leadership: Contributed decisively to the team’s success as the first in the organization to
+            transition all critical services to a 100% cloud-based infrastructure
+          </li>
+        </ul>
+      </p>
+    </div>
   </div>
 
   <!-- USMC -->
@@ -209,21 +282,20 @@ import PageLayout from '../layouts/PageLayout.astro';
   </div>
 </PageLayout>
 
-<style>
-  /* body.light .work-history-entry {
-    background-color: white;
-  } */
-</style>
+<script>
+  const contentHeaders = document.getElementsByClassName('content-header');
 
-<!-- <script>
-  const themeToggle = document.getElementById('theme-toggle-button');
+  // this assumes that content-header and content are siblings right next to each other.
+  // not great, but will do for now
+  for (let contentHeader of contentHeaders) {
+    contentHeader.addEventListener('click', () => {
+      const content = contentHeader.nextElementSibling;
 
-  themeToggle?.addEventListener('click', () => {
-    const entries = document.getElementsByClassName('work-history-entry');
+      contentHeader?.getElementsByClassName('collapse-icon')[0]?.classList.toggle('rotate-180');
 
-    for (let entry of entries) {
-      entry.classList.toggle('bg-gray-300');
-      entry.classList.toggle('bg-gray-400');
-    }
-  });
-</script> -->
+      content?.classList.toggle('max-h-0');
+      // this is highly coupled to the content... but its working
+      content?.classList.toggle(`max-h-[36rem]`);
+    });
+  }
+</script>
