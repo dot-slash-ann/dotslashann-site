@@ -61,7 +61,6 @@ const links: Link[] = [
   <div class="w-full">
     <nav class="">
       <div class="flex justify-between items-center mb-4">
-        <!-- <p class="mt-4 mr-4 ml-2 text-2xl">$./ann</p> -->
         <svg class="mt-2 ml-5" width="128" height="56" viewBox="0 0 56 128" xmlns="http://www.w3.org/2000/svg">
           <text x="100px" y="50%" dominant-baseline="middle" text-anchor="end" font-family="monospace" font-size="56">
             $ ./ann
@@ -174,10 +173,8 @@ const links: Link[] = [
   function loadTheme() {
     const theme = localStorage.getItem('theme');
 
-    console.log(`theme: ${theme}`);
-
     applyTheme(theme);
   }
 
-  loadTheme();
+  document.addEventListener('DOMContentLoaded', loadTheme);
 </script>

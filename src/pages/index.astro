@@ -43,7 +43,7 @@ const FrameworksAndLibraries = [
 
 <PageLayout title="About">
   <h1 class="text-text-inverse text-3xl font-bold mb-4">Ann Alonzo</h1>
-  <di class="flex flex-col">
+  <div class="flex flex-col">
     <p class="text-text-inverse font-medium">Senior Software Engineer</p>
     <div class="flex flex-row">
       <p class="text-text-inverse font-medium">Pronouns:</p>
@@ -54,7 +54,7 @@ const FrameworksAndLibraries = [
       <p class="text-text-inverse ml-2">|</p>
       <p class="text-text-inverse ml-2"><a href="https://linktr.ee/dotslashann">https://linktr.ee/dotslashann</a></p>
     </div>
-  </di>
+  </div>
   <p class="text-text-inverse mt-2">
     Versatile <b>Senior Software Engineer</b> with experience in developing highly reliable and scalable solutions for large-scale
     problems. Seeking to leverage a broad skill set in <b>DevOps</b>, <b>full stack</b>, and <b>backend</b> development to
@@ -66,11 +66,11 @@ const FrameworksAndLibraries = [
     {expertiseAndValues.map((item) => <li class="text-text-inverse">{item}</li>)}
   </ul>
 
-  <h2 class="text-lg text-text-inverse font-bold mt-4 mb-2">
+  <h2 class="text-lg text-text-inverse font-bold mt-4">
     Technical Skills <span class="text-sm font-normal">(not a complete list)</span>
   </h2>
 
-  <div id="technical-skills" class="grid gap-5 p-5">
+  <div id="technical-skills" class="grid gap-5 p-5 pt-0 mt-2">
     <ul class="list-disc pl-8">
       <h3 class="font-bold -ml-8 text-text-inverse mb-1">Programming Languages</h3>
       {programmingLanguages.map((item) => <li class="text-text-inverse">{item}</li>)}
@@ -84,6 +84,10 @@ const FrameworksAndLibraries = [
       {FrameworksAndLibraries.map((item) => <li class="text-text-inverse">{item}</li>)}
     </ul>
   </div>
+
+  <h2 class="text-lg text-text-inverse font-bold mt-4">Education</h2>
+  <p class="text-text-inverse">Bachelor's of Science in Computer Science</p>
+  <p class="text-text-inverse">San Francisco State University</p>
 </PageLayout>
 
 <style>
