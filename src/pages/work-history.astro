@@ -282,20 +282,24 @@ import PageLayout from '../layouts/PageLayout.astro';
   </div>
 </PageLayout>
 
-<script>
-  const contentHeaders = document.getElementsByClassName('content-header');
+<script is:inline>
+  function collapse() {
+    const contentHeaders = document.getElementsByClassName('content-header');
 
-  // this assumes that content-header and content are siblings right next to each other.
-  // not great, but will do for now
-  for (let contentHeader of contentHeaders) {
-    contentHeader.addEventListener('click', () => {
-      const content = contentHeader.nextElementSibling;
+    // this assumes that content-header and content are siblings right next to each other.
+    // not great, but will do for now
+    for (let contentHeader of contentHeaders) {
+      contentHeader.addEventListener('click', () => {
+        const content = contentHeader.nextElementSibling;
 
-      contentHeader?.getElementsByClassName('collapse-icon')[0]?.classList.toggle('rotate-180');
+        contentHeader?.getElementsByClassName('collapse-icon')[0]?.classList.toggle('rotate-180');
 
-      content?.classList.toggle('max-h-0');
-      // this is highly coupled to the content... but its working
-      content?.classList.toggle(`max-h-[36rem]`);
-    });
+        content?.classList.toggle('max-h-0');
+        // this is highly coupled to the content... but its working
+        content?.classList.toggle(`max-h-[36rem]`);
+      });
+    }
   }
+
+  document.addEventListener('astro:page-load', () => collapse());
 </script>

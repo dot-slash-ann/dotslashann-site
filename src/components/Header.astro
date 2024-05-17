@@ -76,7 +76,7 @@ const links: Link[] = [
             return (
               <li
                 class={
-                  'p-2 ml-2 transition-background-color duration-300 ease-in-out hover:bg-primary hover:text-white' +
+                  'nav-menu-item p-2 ml-2 transition-background-color duration-300 ease-in-out hover:bg-primary hover:text-white' +
                   liClass
                 }
               >
@@ -176,5 +176,5 @@ const links: Link[] = [
     applyTheme(theme);
   }
 
-  document.addEventListener('DOMContentLoaded', loadTheme);
+  document.addEventListener('astro:page-load', loadTheme);
 </script>
