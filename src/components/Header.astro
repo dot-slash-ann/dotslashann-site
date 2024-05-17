@@ -182,6 +182,11 @@ const links: Link[] = [
     for (let item of navMenuItems) {
       const anchor = item.querySelector('a');
 
+      console.log(anchor);
+      console.log(anchor.getAttribute('href'));
+      console.log(window.location.pathname);
+      console.log(anchor.getAttribute('href') === window.location.pathname);
+
       if (anchor.getAttribute('href') === window.location.pathname) {
         item.classList.add('active');
       } else {
