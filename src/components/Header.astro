@@ -181,8 +181,9 @@ const links: Link[] = [
 
     for (let item of navMenuItems) {
       const anchor = item.querySelector('a');
+      const href = anchor.getAttribute('href');
 
-      if ([window.location.pathname, window.location.pathname + '/'].contains(anchor.getAttribute('href'))) {
+      if ([href, href + '/'].includes(window.location.pathname)) {
         item.classList.add('active');
       } else {
         item.classList.remove('active');
